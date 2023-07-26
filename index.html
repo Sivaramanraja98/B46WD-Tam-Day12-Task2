@@ -1,180 +1,116 @@
-<html>
-    <head>
-    <title>SurveyForm</title>
-    <style>
-        .btn:hover{
-            background: transparent;
-            color: whitesmoke;
-        }
-        h2{
-            text-align: center;
-        }
-        body{
-            background-color: steelblue;
-            color:white;
-        }
-        .name {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-        }
-        .fullname {
-            padding: 5px;
-            margin: 5px;
-        }
-        .co7 {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            justify-content:flex-start;
-        }
-        .btn {
-            padding: 5px;
-            margin: 5px;
-        }
-        .fg {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap : 10px;
-        grid-auto-rows : minmax(90px, auto);
-        }
-        .co1 {
-        grid-column:1/2;
-        grid-row: 1;
-        }
-        .co2 {
-        grid-column: 1/2;
-        grid-row: 2;
-        }
-        .co3 {
-        grid-column: 1/2;
-        grid-row: 3;
-        }
-        .co4 {
-        grid-column: 1/2;
-        grid-row: 4;
-        }
-        .co5 {
-        grid-column:1/2;
-        grid-row: 5;
-        }
-        .co6 {
-        grid-column: 1/2;
-        grid-row: 6;
-        }
-        .co7 {
-        grid-column: 1/2;
-        grid-row: 7;
-        }
-        n{
-            width:50%;
-        }
-        table,td,tr,th{
-                border: 0px solid black;
-                border-collapse: collapse;
-                text-align: center;
-        }
-        .r1{
-            background-color: rgb(195, 225, 232);
-        }
-        .r2{
-            background-color: rgb(202, 197, 197);
-        }
-        .r3{
-            background-color: rgb(195, 225, 232);
-        }
-        .r4{
-            background-color:rgb(202, 197, 197);
-        }
-    </style>
-    </head>
-    <body > 
-        <h2>SurveyForm on Your Trip With Us</h2>
-        <form class="fg">
-         <div class="co1">
-            <b>Name :</b><br>
-            <div class="name">
-            <div class="fullname">Firstname :<br>
-            <input id="n" type = "text" name = "firstname"/> </div>
-            <div class="fullname">Lastname :<br>
-            <input id="n" type = "text" name = "lastname"/></div>
-            </div><br>
-         </div>
-         <div class="co2">
-           <b>Email ID :</b><br>
-            <input type = "text" name = "email" style = "width:30%"/><br>
-         </div>
-         <div class="co3">
-           <b>Gender</b><br>
-            <select>
-                <option value="select" hidden disabled selected>select</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Others">Others</option>
-                <option value="nill">Not to Disclose</option>
-            </select><br>
-         </div>
-         <div class="co4">
-           <b> How Statisfied are you with us:</b><br>
-            <table class="table"; style=" height: 50%;width: 60%;">
-                <tr class="r1">
-                    <th></th>
-                    <th>Very Unstatisfied</th>
-                    <th>Unstatisfied</th>
-                    <th>Neutral</th>
-                    <th>Statisfied</th>
-                    <th>Very statisfied</th>
-                </tr>
-                <tr class="r2">
-                    <td>Service</td>
-                    <td> <input type = "radio" name = "Service"/></td>
-                    <td> <input type = "radio" name = "Service"/></td>
-                    <td> <input type = "radio" name = "Service"/></td>
-                    <td> <input type = "radio" name = "Service"/></td>
-                    <td> <input type = "radio" name = "Service"/></td>
-                </tr>
-                <tr class="r3">
-                    <td>Staff</td>
-                    <td> <input type = "radio" name = "staff"/></td>
-                    <td> <input type = "radio" name = "staff"/></td>
-                    <td> <input type = "radio" name = "staff"/></td>
-                    <td> <input type = "radio" name = "staff"/></td>
-                    <td> <input type = "radio" name = "staff"/></td>
-                </tr>
-                <tr class="r4">
-                    <td>Cleaniness</td>
-                    <td> <input type = "radio" name = "Clean"/></td>
-                    <td> <input type = "radio" name = "Clean"/></td>
-                    <td> <input type = "radio" name = "clean"/></td>
-                    <td> <input type = "radio" name = "clean"/></td>
-                    <td> <input type = "radio" name = "clean"/></td>
-                </tr>
-           
-            </table>
-         </div>
-         <div class="co5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="surveyform">
+            <div>
+                <label for="name">Name <span>*</span> :</label>
+                <br>
+                <input type="text" id="Fname" placeholder="Firstname">
+                <input type="text" id="Lname" placeholder="LastName">
+            </div>
             <br>
-            
-            <div class="rate"> Rating :
-                <input type="radio" id="star5" name="rate1" value="1" />
-                <label for="star5" title="text"></label>
-                <input type="radio" id="star4" name="rate2" value="2" />
-                <label for="star4" title="text"></label>
-                <input type="radio" id="star3" name="rate3" value="3" />
-                <label for="star3" title="text"></label>
-                <input type="radio" id="star2" name="rate4" value="4" />
-                <label for="star2" title="text"></label>
-                <input type="radio" id="star1" name="rate5" value="5" />
-                <label for="star1" title="text"></label>
-              </div>
-         </div> 
-         <div class="co6">
-            <b>FeedBack</b><br>
-            <textarea style = "height:70%; width:60%"></textarea>
-           </div>
-         <div class="co7">
-         <input class="btn" type = "button" value = "Save"/><input class="btn"type = "button" value = "Cancel"/>
-        </div>
+            <div>
+                <label for="email">Email <span>*</span> :</label>
+                <br>
+                <input type="text" id="Fname" placeholder="Firstname">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="rating">Your Experience <span>*</span> :</label>
+                <br>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4" required><label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3" required><label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2" required><label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1" required><label for="star1">&#9733;</label>
+                </div>
+            </div>
+            <div>
+                <p>How would you rate us the Experience you had with us ???? <span>*</span>  :</p>
+                <table class="table"; style=" height: 50%;width: 60%;">
+                    <tr class="r1">
+                        <th></th>
+                        <th>Very Unstatisfied</th>
+                        <th>Unstatisfied</th>
+                        <th>Neutral</th>
+                        <th>Statisfied</th>
+                        <th>Very statisfied</th>
+                    </tr>
+                    <tr class="r2">
+                        <td>Purchase</td>
+                        <td> <input type = "radio" name = "Purchase"/></td>
+                        <td> <input type = "radio" name = "Purchase"/></td>
+                        <td> <input type = "radio" name = "Purchase"/></td>
+                        <td> <input type = "radio" name = "Purchase"/></td>
+                        <td> <input type = "radio" name = "Purchase"/></td>
+                    </tr>
+                    <tr class="r3">
+                        <td>Service</td>
+                        <td> <input type = "radio" name = "Service"/></td>
+                        <td> <input type = "radio" name = "Service"/></td>
+                        <td> <input type = "radio" name = "Service"/></td>
+                        <td> <input type = "radio" name = "Service"/></td>
+                        <td> <input type = "radio" name = "Service"/></td>
+                    </tr>
+                    <tr class="r4">
+                        <td>Overall</td>
+                        <td> <input type = "radio" name = "Overall"/></td>
+                        <td> <input type = "radio" name = "Overall"/></td>
+                        <td> <input type = "radio" name = "Overall"/></td>
+                        <td> <input type = "radio" name = "Overall"/></td>
+                        <td> <input type = "radio" name = "Overall"/></td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div>
+                <p>How You like us ???? <span>*</span>  :</p>
+                <table class="table"; style=" height: 50%;width: 60%;">
+                    <tr class="r1">
+                        <th></th>
+                        <th>Very Unlikely</th>
+                        <th>Unlikely</th>
+                        <th>Neutral</th>
+                        <th>Likely</th>
+                        <th>Very Likely</th>
+                    </tr>
+                    <tr class="r2">
+                        <td>Buy from us Again</td>
+                        <td> <input type = "radio" name = "Buy from us Again"/></td>
+                        <td> <input type = "radio" name = "Buy from us Again"/></td>
+                        <td> <input type = "radio" name = "Buy from us Again"/></td>
+                        <td> <input type = "radio" name = "Buy from us Again"/></td>
+                        <td> <input type = "radio" name = "Buy from us Again"/></td>
+                    </tr>
+                    <tr class="r3">
+                        <td>Recomend Us to Others</td>
+                        <td> <input type = "radio" name = "Recomend to Others"/></td>
+                        <td> <input type = "radio" name = "Recomend to Others"/></td>
+                        <td> <input type = "radio" name = "Recomend to Others"/></td>
+                        <td> <input type = "radio" name = "Recomend to Others"/></td>
+                        <td> <input type = "radio" name = "Recomend to Others"/></td>
+                    </tr>             
+                </table>
+             
+            </div>
+            <br>
+            <div class="FeedBack">
+                <b>Additional Comments or Suggestions <span>*</span> :</b><br>
+                <textarea style = "height:100px; width:60%"></textarea>
+            </div>
+            <br>
+            <div class="button">
+                <button type="submit" class="btn">Submit</button>
+            </div>
         </form>
-    </body>
+    </div>
+</body>
 </html>
